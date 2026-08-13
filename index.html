@@ -136,6 +136,7 @@
         .item-icon{font-size:1.2rem}
         .item-info{display:flex;align-items:center;gap:8px;flex:1;min-width:0;flex-wrap:wrap}
         .item-name{font-weight:600;font-size:.9rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+        .rare-badge{font-size:.72rem;flex-shrink:0}
         .item-sub{font-size:.75rem;color:var(--muted)}
         .item-prog{color:var(--accent);font-weight:700;font-size:.78rem;white-space:nowrap;padding:2px 6px;border-radius:999px;background:rgba(92,184,96,.10)}
         .item-btns{display:flex;gap:4px;align-items:center}
@@ -403,16 +404,16 @@ const C8 = C;
 
 
 const REGULAR = [
-  {id:'reg_廚師帽子',n:'餐廳/廚師帽子',i:'🍽️',c:{'red':1,'yellow':1,'blue':1,'purple':1,'white':1,'rock':1,'winged':1,'ice':1}},
-  {id:'reg_咖啡杯',n:'咖啡廳/咖啡杯',i:'☕',c:{'red':1,'yellow':1,'blue':1,'purple':1,'white':1,'rock':1,'winged':1,'ice':1}},
+  {id:'reg_廚師帽子',n:'餐廳/廚師帽子',i:'🍽️',c:{'red':1,'yellow':1,'blue':1,'purple':1,'white':1,'rock':1,'winged':1,'ice':1},rare:true},
+  {id:'reg_咖啡杯',n:'咖啡廳/咖啡杯',i:'☕',c:{'red':1,'yellow':1,'blue':1,'purple':1,'white':1,'rock':1,'winged':1,'ice':1},rare:true},
   {id:'reg_馬卡龍',n:'甜品店/馬卡龍',i:'🍰',c:{'red':1,'yellow':1,'blue':1,'purple':1,'white':1,'rock':1,'winged':1}},
   {id:'reg_甜甜圈',n:'甜品店/甜甜圈',i:'🍩',c:{'red':1,'yellow':1,'blue':1,'purple':1,'white':1,'rock':1,'winged':1}},
   {id:'reg_爆米花',n:'電影院/爆米花',i:'🍿',c:{'red':1,'yellow':1,'blue':1,'purple':1,'white':1,'rock':1,'winged':1}},
-  {id:'reg_牙刷',n:'藥局/牙刷',i:'🪥',c:{'red':1,'yellow':1,'blue':1,'purple':1,'white':1,'rock':1,'winged':1,'ice':1}},
+  {id:'reg_牙刷',n:'藥局/牙刷',i:'🪥',c:{'red':1,'yellow':1,'blue':1,'purple':1,'white':1,'rock':1,'winged':1,'ice':1},rare:true},
   {id:'reg_蒲公英',n:'動物園/蒲公英',i:'🌼',c:{'red':1,'yellow':1,'blue':1,'purple':1,'white':1,'rock':1,'winged':1}},
   {id:'reg_鍬形蟲',n:'森林/鍬形蟲',i:'🪲',c:{'red':1,'yellow':1,'blue':1,'purple':1,'white':1,'rock':1,'winged':1,'ice':1}},
   {id:'reg_橡栗',n:'森林/橡栗',i:'🌰',c:{'red':1,'yellow':1,'blue':1,'purple':1,'white':1,'rock':1,'winged':1,'ice':1}},
-  {id:'reg_擬餌',n:'水邊/擬餌',i:'🪤',c:{'red':1,'yellow':1,'blue':1,'purple':1,'white':1,'rock':1,'winged':1}},
+  {id:'reg_擬餌',n:'水邊/擬餌',i:'🪤',c:{'red':1,'yellow':1,'blue':1,'purple':1,'white':1,'rock':1,'winged':1},rare:true},
   {id:'reg_郵票',n:'郵局/郵票',i:'📮',c:{'red':1,'yellow':1,'blue':1,'purple':1,'white':1,'rock':1,'winged':1}},
   {id:'reg_畫框',n:'美術館/畫框',i:'🖼️',c:{'red':1,'yellow':1,'blue':1,'purple':1,'white':1,'rock':1,'winged':1}},
   {id:'reg_飛機玩具',n:'機場/飛機玩具',i:'✈️',c:{'red':1,'yellow':1,'blue':1,'purple':1,'white':1,'rock':1,'winged':1}},
@@ -423,17 +424,17 @@ const REGULAR = [
   {id:'reg_瓶蓋',n:'便利店/瓶蓋',i:'🧢',c:{'red':1,'yellow':1,'blue':1,'purple':1,'white':1,'rock':1,'winged':1}},
   {id:'reg_零食',n:'便利店/零食',i:'🍫',c:{'red':1,'yellow':1,'blue':1,'purple':1,'white':1,'rock':1,'winged':1}},
   {id:'reg_蘑菇',n:'超市/蘑菇',i:'🍄',c:{'red':1,'yellow':1,'blue':1,'purple':1,'white':1,'rock':1,'winged':1}},
-  {id:'reg_香蕉',n:'超市/香蕉',i:'🍌',c:{'red':1,'yellow':1,'blue':1,'purple':1,'white':1,'rock':1,'winged':1}},
-  {id:'reg_法国麵包',n:'麵包店/法国麵包',i:'🥖',c:{'red':1,'yellow':1,'blue':1,'purple':1,'white':1,'rock':1,'winged':1,'ice':1}},
-  {id:'reg_剪刀',n:'美容院/剪刀',i:'✂️',c:{'red':1,'yellow':1,'blue':1,'purple':1,'white':1,'rock':1,'winged':1}},
+  {id:'reg_香蕉',n:'超市/香蕉',i:'🍌',c:{'red':1,'yellow':1,'blue':1,'purple':1,'white':1,'rock':1,'winged':1},rare:true},
+  {id:'reg_法国麵包',n:'麵包店/法国麵包',i:'🥖',c:{'red':1,'yellow':1,'blue':1,'purple':1,'white':1,'rock':1,'winged':1,'ice':1},rare:true},
+  {id:'reg_剪刀',n:'美容院/剪刀',i:'✂️',c:{'red':1,'yellow':1,'blue':1,'purple':1,'white':1,'rock':1,'winged':1},rare:true},
   {id:'reg_髮圈',n:'服装店/髮圈',i:'💇',c:{'red':1,'yellow':1,'blue':1,'purple':1,'white':1,'rock':1,'winged':1}},
-  {id:'reg_幸運草',n:'公園/幸運草',i:'☘️',c:{'red':1,'yellow':1,'blue':1,'purple':1,'white':1,'rock':1,'winged':1,'ice':1}},
-  {id:'reg_四葉幸運草',n:'公園/四葉幸運草',i:'🍀',c:{'red':1,'yellow':1,'blue':1,'purple':1,'white':1,'rock':1,'winged':1,'ice':1}},
+  {id:'reg_幸運草',n:'公園/幸運草',i:'☘️',c:{'red':1,'yellow':1,'blue':1,'purple':1,'white':1,'rock':1,'winged':1,'ice':1},rare:true},
+  {id:'reg_四葉幸運草',n:'公園/四葉幸運草',i:'🍀',c:{'red':1,'yellow':1,'blue':1,'purple':1,'white':1,'rock':1,'winged':1,'ice':1},rare:true},
   {id:'reg_迷你書',n:'圖書館＆書店/迷你書',i:'📚',c:{'red':1,'yellow':1,'blue':1,'purple':1,'white':1,'rock':1,'winged':1}},
   {id:'reg_綠色貼紙',n:'路邊/綠色貼紙',i:'🟢',c:{'red':1,'yellow':1,'blue':1,'purple':1,'white':1,'rock':1,'winged':1,'ice':1}},
   {id:'reg_藍色貼紙',n:'路邊/藍色貼紙',i:'🔵',c:{'red':1,'yellow':1,'blue':1,'purple':1,'white':1,'rock':1,'winged':1,'ice':1}},
   {id:'reg_橘色貼紙',n:'路邊/橘色貼紙',i:'🟠',c:{'red':1,'yellow':1,'blue':1,'purple':1,'white':1,'rock':1,'winged':1,'ice':1}},
-  {id:'reg_金幣',n:'路邊/金幣',i:'🪙',c:{'red':1,'yellow':1,'blue':1,'purple':1,'white':1,'rock':1,'winged':1,'ice':1}},
+  {id:'reg_金幣',n:'路邊/金幣',i:'🪙',c:{'red':1,'yellow':1,'blue':1,'purple':1,'white':1,'rock':1,'winged':1,'ice':1},rare:true},
   {id:'reg_壽司',n:'壽司餐厅/壽司',i:'🍣',c:{'red':1,'yellow':1,'blue':1,'purple':1,'white':1,'rock':1,'winged':1}},
   {id:'reg_山岳别针徽章',n:'山丘/山岳别针徽章',i:'🏔️',c:{'red':1,'yellow':1,'blue':1,'purple':1,'white':1,'rock':1,'winged':1}},
   {id:'reg_体育馆鑰匙圈',n:'體育馆/体育馆鑰匙圈',i:'🏟️',c:{'red':1,'yellow':1,'blue':1,'purple':1,'white':1,'rock':1,'winged':1,'ice':1}},
@@ -968,7 +969,7 @@ function renderItem(d){
     const cnt=entries.reduce((s,[c,max])=>s+Array.from({length:max},(_,i)=>(own[key(d.id,c,i)]||0)>0?1:0).reduce((a,b)=>a+b,0),0);
     const done=cnt===total;
     const cols=JSON.stringify(Object.keys(d.c)).replace(/"/g,"'");
-    return `<div class="item ${done?'done':''}" data-decor-id="${d.id}"><div class="item-row"><span class="item-icon">${d.i}</span><div class="item-info"><span class="item-name">${d.n}</span>${d.note?`<span class="item-sub">${d.note}</span>`:''}<span class="item-prog">${cnt}/${total}</span></div><div class="item-btns"><span class="clear-btn ${pendingClear===d.id?'confirm':''}" onclick="event.stopPropagation();clearD('${d.id}',${cols})">${pendingClear===d.id?'確認':'清空'}</span></div></div><div class="piks">${entries.flatMap(([c,max])=>Array.from({length:max},(_,i)=>{const val=own[key(d.id,c,i)]||0;const has=val>0;return`<div class="pik ${has?'own':''}" data-id="${d.id}" data-color="${c}" data-idx="${i}" onclick="toggle('${d.id}','${c}',${i})" title="${CN[c]}"><div class="d dot ${c}">${max>1?'<span class="dot-num">'+(i+1)+'</span>':''}</div>${has?`<span class="bubble">${val}</span>`:''}</div>`;})).join('')}</div></div>`;
+    return `<div class="item ${done?'done':''}" data-decor-id="${d.id}"><div class="item-row"><span class="item-icon">${d.i}</span><div class="item-info"><span class="item-name">${d.n}</span>${d.rare?'<span class="rare-badge" title="稀有飾品">⭐</span>':''}${d.note?`<span class="item-sub">${d.note}</span>`:''}<span class="item-prog">${cnt}/${total}</span></div><div class="item-btns"><span class="clear-btn ${pendingClear===d.id?'confirm':''}" onclick="event.stopPropagation();clearD('${d.id}',${cols})">${pendingClear===d.id?'確認':'清空'}</span></div></div><div class="piks">${entries.flatMap(([c,max])=>Array.from({length:max},(_,i)=>{const val=own[key(d.id,c,i)]||0;const has=val>0;return`<div class="pik ${has?'own':''}" data-id="${d.id}" data-color="${c}" data-idx="${i}" onclick="toggle('${d.id}','${c}',${i})" title="${CN[c]}"><div class="d dot ${c}">${max>1?'<span class="dot-num">'+(i+1)+'</span>':''}</div>${has?`<span class="bubble">${val}</span>`:''}</div>`;})).join('')}</div></div>`;
 }
 
 function renderMiss(){
@@ -1553,7 +1554,7 @@ function releaseActionButtonState(){document.querySelectorAll('.share-action').f
 function buildIndexList(){
     const list=document.getElementById('indexList');
     let h='<div class="idx-group">🏠 常駐</div>';
-    REGULAR.forEach(d=>{ h+=`<div class="idx-item" onclick="scrollToDecor('${d.id}')">${d.i} ${d.n.split('/')[1]||d.n}</div>`; });
+    REGULAR.forEach(d=>{ h+=`<div class="idx-item" onclick="scrollToDecor('${d.id}')">${d.i} ${d.n.split('/')[1]||d.n}${d.rare?'⭐':''}</div>`; });
     const selectedEv=EVENTS.filter(ev=>selectedEvents.includes(ev.id));
     if(selectedEv.length){
         h+='<div class="idx-group">🎉 活動</div>';

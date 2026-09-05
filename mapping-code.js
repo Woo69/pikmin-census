@@ -80,6 +80,7 @@ window.PIKMIN_SHARE_CODES = {
     'ev_冰激凌：經典':'ic',
     'ev_冰淇淋：2024口味':'i4',
     'ev_刨冰':'si',
-    'ev_峇里島雕刻':'bc'
+    'ev_峇里島雕刻':'bc',
+    'ev_秋天貼紙':'as'
   }
 };

@@ -81,6 +81,7 @@ window.PIKMIN_SHARE_CODES = {
     'ev_冰淇淋：2024口味':'i4',
     'ev_刨冰':'si',
     'ev_峇里島雕刻':'bc',
-    'ev_秋天貼紙':'as'
+    'ev_秋天貼紙':'as',
+    'ev_月餅':'mc'
   }
 };
